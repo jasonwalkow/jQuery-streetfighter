@@ -1,19 +1,21 @@
-//Ryu still position
-
-//Listen for mouseenter and mouseleave events on Ryu
-
-//Mouseenter moves Ryu into ready position
-
-//Mouseleave moves Ryu back into still position
-
-//Listen for click events
-
-//Mousedown initiates Hadouken sequence
-
-//Mouseup ends Hadouken sequence
-
-//Listen for key events
-
-//Keydown initiates looking cool sequence
-
-//Keyup ends looking cool sequence
+$(document).ready(function() {
+	$('.ryu').mouseenter(function() {
+		$('.ryu-still').hide();
+		$('.ryu-ready').show();
+	})
+	.mouseleave(function() {
+		$('.ryu-ready').hide();
+		$('.ryu-still').show();
+	})
+	.mousedown(function() {
+		// play hadouken sound
+		$('.ryu-ready').hide();
+		$('.ryu-throwing').show();
+		$('.hadouken').show();
+		// show hadouken and animate it to the right of the screen
+	})
+	.mouseup(function() {
+		$('.ryu-throwing').hide();
+		$('.ryu-ready').show();
+	});
+});
