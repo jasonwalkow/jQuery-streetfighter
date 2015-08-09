@@ -1,29 +1,31 @@
 body {
-	background-color: black;
+	 background-color: black;
 }
 
 .main {
-	background-color: white;
-	margin-top: 110px;
-	padding-left: 100px;
-	min-width: 1200px;
-	height: 500px;
-	position: relative;
-	z-index: 1;
+	 background-image: url('../images/streetbackground.png');
+   background-size: cover;
+   background-repeat: no-repeat;
+	 margin-top: 110px;
+	 padding-left: 100px;
+	 min-width: 1200px;
+	 height: 500px;
+	 position: relative;
+	 z-index: 1;
 }
 
 .ryu {
-	float: left;
-	width: 659px;
-	height: 494px;
+	 float: left;
+	 width: 659px;
+	 height: 494px;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   	width: 659px;
   	height: 494px;
 }
 
-.ryu-ready, .ryu-throwing {
+.ryu-ready, .ryu-throwing, .ryu-cool {
   	display: none;
 } 
 
@@ -39,7 +41,11 @@ body {
   	background-image: url('../images/ryu-throwing-hadouken.png');
 }
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-cool {
+    background-image: url('../images/ryu-cool.gif');
+}
+
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   	background-repeat: no-repeat;
 }
 
@@ -53,6 +59,43 @@ body {
   	z-index: 10;
   	top: 167px;
   	left: 520px;
+}
+
+.logo {
+    background-image: url('../images/sflogo.png');
+    width: 700px;
+    height: 349px;
+    display: block;
+    float: left;
+    position: absolute;
+    z-index: 10;
+    top: 167px;
+    left: 500px;
+}
+
+.instructions {
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+    width: 500px;
+    height: 280px;
+    padding-left: 1em;
+    padding-top: 0.1em;
+    display: block;
+    float: left;
+    position: absolute;
+    z-index: 10;
+    top: 220px;
+    left: 550px;
+    font-family: 'Walter Turncoat', sans-serif;
+    font-size: 2em;
+    border-radius: 20px;
+    line-height: 1em;
+}
+
+.title-line {
+  color: red;
+  font-weight: bold;
 }
 
 
